@@ -80,10 +80,10 @@ $temp = $row['temp'];
   $row = mysql_fetch_array($result);
   $state = $row['state'];
 
-  if ($state == 0)
-    $strState = "off";
-  else
+  if ($state == 1)
     $strState = "on";
+  else
+    $strState = "off";
   $_SESSION['alarmTime'] = $time;
   $_SESSION['state'] = $strState;
   ?>
