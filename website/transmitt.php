@@ -165,6 +165,12 @@ elseif($state == 0)
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$result = curl_exec ($ch);
 	curl_close ($ch);
+	$query = "UPDATE alarms SET state = '2'";
+	mysql_query($query);
+}
+elseif($state == 2){
+	//
+	echo "Should keep device from turning off once off"
 }
 else
 {
